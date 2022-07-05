@@ -1,21 +1,14 @@
 /** @format */
+export const mailValidation = () => {
+	const mail = document.querySelector('#mail').value.trim();
+	const errorMail = document.querySelector('#mail+p');
 
-const nom = document.querySelector('#name');
-const mail = document.querySelector('#mail');
+	const emptyMail = 'Email cannot be empty';
+	const invalidMail = 'Enter a valid email';
 
-const errorName = document.querySelector('#name+p');
-const errorMail = document.querySelector('#mail+p');
-
-const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-
-const emptyName = 'Name cannot be empty';
-const invalidName = 'Enter a valid name';
-const emptyMail = 'Email cannot be empty';
-const invalidMail = 'Enter a valid email';
-
-const mailValidation = (value) => {
 	let isValid = false;
-	let mail = value.value.trim();
+	const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
 	if (mail != '') {
 		if (emailRegex.test(mail)) {
 			errorMail.textContent = '';
@@ -30,12 +23,18 @@ const mailValidation = (value) => {
 		errorMail.parentElement.classList.add('error');
 	}
 
-	return isValid;
+	if (isValid) return mail;
 };
 
-const nameValidation = (value) => {
+export const nameValidation = () => {
+	const nom = document.querySelector('#name').value.trim();
+	const errorName = document.querySelector('#name+p');
+
+	const emptyName = 'Name cannot be empty';
+	const invalidName = 'Enter a valid name';
+
 	let isValid = false;
-	let nom = value.value.trim();
+
 	if (nom != '') {
 		if (nom.length < 3) {
 			errorName.textContent = invalidName;
@@ -50,5 +49,5 @@ const nameValidation = (value) => {
 		errorName.parentElement.classList.add('error');
 	}
 
-	return isValid;
+	if (isValid) return nom;
 };

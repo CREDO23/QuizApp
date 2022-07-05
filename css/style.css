@@ -81,7 +81,7 @@ body {
 	font-size: 12px;
 }
 
-.accueil-main input[type='submit'] {
+.accueil-main input[type='button'] {
 	padding: 0px 20px;
 	border: none;
 	width: min-content;
