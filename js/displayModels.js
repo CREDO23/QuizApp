@@ -1,6 +1,6 @@
 /** @format */
 
-const displayformAccueil = () => {
+export function displayformAccueil() {
 	document.querySelector('main').innerHTML = `
 
     <div class="accueil-main">
@@ -29,9 +29,9 @@ const displayformAccueil = () => {
 			</div>
 
     `;
-};
+}
 
-const displayQuestion = () => {
+export function displayQuestion() {
 	document.querySelector('main').innerHTML = `
 
     <div class="question-main">
@@ -84,9 +84,9 @@ const displayQuestion = () => {
 			</div>
 
     `;
-};
+}
 
-const displayResult = () => {
+export function displayResult() {
 	document.querySelector('main').innerHTML = `
     
     <div class="result-main">
@@ -100,4 +100,4 @@ const displayResult = () => {
 			</div>
     
     `;
-};
+}
