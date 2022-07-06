@@ -41,7 +41,7 @@ export const questionList = [
 		answer2: 'Tester si la valeur est un nombre',
 		answer3: 'Tester si la valeur est un objet',
 		answer4: 'Tester si la valeur est un tableau',
-		rightAnswer: 'en respectant le commendement de Dieu',
+		rightAnswer: 'Tester si la valeur est un nombre',
 	},
 	{
 		question:
