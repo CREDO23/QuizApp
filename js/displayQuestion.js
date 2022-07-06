@@ -97,7 +97,15 @@ export function displayQuestion(
 
 	leaveBtn.addEventListener('click', () => {
 		clearInterval(myInnterval);
-		displayFormAccueil();
+		choices.forEach((btn) => {
+			if (btn.checked) {
+				question.rightAnswer ==
+				document.querySelector(`#${btn.id}+div+p`).textContent
+					? j++
+					: btn;
+			}
+		});
+		displayResult(uN, uM, j);
 	});
 
 	if (questionList.indexOf(question) < questionList.length - 1) {

@@ -232,6 +232,10 @@ body {
 	}
 }
 
+.border {
+	border: solid green 1px;
+}
+
 /* result */
 
 .result-main {
